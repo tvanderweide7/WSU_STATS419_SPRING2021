@@ -38,4 +38,4 @@ handShake = function(n=1, plotMe = FALSE) {
 }
 
 
-alphaCount = function(string, )
+#alphaCount = function(string, )
