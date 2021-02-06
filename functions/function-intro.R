@@ -1,4 +1,6 @@
-is.wholenumber = function(x, tol = .Machine$double.eps^0.5)  abs(x - round(x)) < tol
+is.wholenumber = function(x, tol = .Machine$double.eps^0.5){
+  abs(x - round(x)) < tol
+}
 
 
 handShake = function(n=1, plotMe = FALSE) {
