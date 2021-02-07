@@ -14,7 +14,7 @@ handShake = function(n=1, plotMe = FALSE) {
 
   if (plotMe) {
     color = rand_color(n, luminosity = "bright", transparency = 0)
-    plot(-n:n, -n:n, type = "n", asp = 1)
+    plot(-n:n, -n:n, type = "n", asp = 1, xlab = "", ylab = "")
     draw.circle(0,0,n/2, border = "purple", lty = 1)
     for (i in 1:n) {
       x0 = ((n/2) * cos((2 * pi * i) / n)) 
@@ -30,12 +30,13 @@ handShake = function(n=1, plotMe = FALSE) {
           x1 = ((n/2) * cos((2 * pi * j) / n)) 
           y1 = ((n/2) * sin((2 * pi * j) / n))
           segments(x0 = x0, y0 = y0, x1 , y1, col = color[i]) # a new color each time
-          Sys.sleep(.25) # adding in a delay so we can see what's happening
+    #      Sys.sleep(.25) # adding in a delay so we can see what's happening. 
+          # Commenting this out for smoother run in the notebook. 
+          # It's pretty cool when run directly from the console.
+          
       } # end of j loop
     } # end of i loop
   } # end of plotting loop
   return(n*(n - 1)/2)
 }
 
-
-#alphaCount = function(string, )
